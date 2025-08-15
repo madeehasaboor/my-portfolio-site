@@ -1,41 +1,2198 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS Test - KSM Enterprises</title>
-    <link rel="stylesheet" href="css/test.css">
-    <style>
-        /* Test styles to verify CSS is working */
-        .test-box {
-            background: red;
-            color: white;
-            padding: 20px;
-            margin: 20px;
-            border-radius: 10px;
-            text-align: center;
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Auto Champain - Premium Car Care</title>
+  <link rel="icon" type="image/x-icon" href="brand logos/auto-champian-logo.jpg.jfif">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+                   body {
+        margin: 0;
+        font-family: 'Roboto', sans-serif;
+        background: #000000 !important;
+        color: white;
+        /* Mobile optimizations */
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+        text-size-adjust: 100%;
+        /* Prevent horizontal scroll */
+        overflow-x: hidden;
+      }
+         
+         /* Logo Styling */
+         .logo {
+           display: flex;
+           align-items: center;
+           justify-content: center;
+           background: rgba(255, 215, 0, 0.2);
+           padding: 10px 20px;
+           border-bottom: 2px solid #FFD700;
+           position: relative;
+           z-index: 10;
+           flex-shrink: 0;
+           gap: 15px;
+         }
+         
+         .logo-image {
+           height: 48px;
+           width: auto;
+           max-width: 120px;
+           object-fit: contain;
+           border-radius: 8px;
+           background-color: transparent;
+           padding: 0;
+           border: 2px solid #FFD700;
+           box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+           transition: all 0.3s ease;
+         }
+         
+         .logo-image:hover {
+           transform: scale(1.05);
+           box-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
+         }
+         
+         .logo h1 {
+           font-size: 1.8rem;
+           color: #FFD700;
+           font-weight: 900;
+           letter-spacing: 2px;
+           text-align: center;
+           text-transform: uppercase;
+           text-shadow: none;
+           animation: none;
+           position: relative;
+           z-index: 10;
+           margin: 0;
+           border: 2px solid #FFD700;
+           padding: 8px 15px;
+           border-radius: 8px;
+           background: rgba(0, 0, 0, 0.3);
+           backdrop-filter: blur(10px);
+           transition: all 0.3s ease;
+         }
+         
+         .logo h1:hover {
+           background: rgba(255, 215, 0, 0.1);
+           transform: scale(1.02);
+           box-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
+         }
+         
+         @media (min-width: 480px) {
+           .logo h1 {
+             font-size: 2rem;
+             letter-spacing: 2px;
+           }
+           .logo-image {
+             height: 56px;
+             max-width: 140px;
+           }
+         }
+         
+         @media (min-width: 768px) {
+           .logo h1 {
+             font-size: 2.5rem;
+             letter-spacing: 3px;
+           }
+           .logo-image {
+             height: 64px;
+             max-width: 160px;
+           }
+         }
+         
+         @media (min-width: 1024px) {
+           .logo h1 {
+             font-size: 3rem;
+             letter-spacing: 4px;
+           }
+           .logo-image {
+             height: 72px;
+             max-width: 180px;
+           }
+         }
+         
+         @media (max-width: 480px) {
+           .logo {
+             flex-direction: column;
+             gap: 8px;
+             padding: 8px 15px;
+           }
+           .logo-image {
+             height: 40px;
+             max-width: 100px;
+           }
+           .logo h1 {
+             font-size: 1.2rem;
+             letter-spacing: 1px;
+           }
+         }
+         
+         @media (max-width: 360px) {
+           .logo {
+             padding: 6px 10px;
+             gap: 6px;
+           }
+           .logo-image {
+             height: 35px;
+             max-width: 80px;
+           }
+           .logo h1 {
+             font-size: 1rem;
+             letter-spacing: 0.5px;
+             padding: 6px 10px;
+           }
+         }
+         
+                   header {
+        background: #000000 !important;
+        padding: 15px 20px;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 15px;
+      }
+         header h1 {
+       margin: 0;
+       font-size: 1.5em;
+       color: #FFD700;
+     }
+         nav a {
+       color: white;
+       margin-left: 15px;
+       text-decoration: none;
+       font-size: 0.9em;
+       transition: color 0.3s ease;
+     }
+     
+     nav a:hover {
+       color: #FFD700;
+     }
+                                       .hero {
+        position: relative;
+        height: 80vh;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        text-align: left;
+        overflow: hidden;
+        background: #000000 !important;
+        padding-left: 5%;
+      }
+    
+                   .hero::before {
+       content: '';
+       position: absolute;
+       top: 0;
+       left: 0;
+       right: 0;
+       bottom: 0;
+       background: transparent;
+       pointer-events: none;
+       z-index: 1;
+     }
+     
+     @keyframes heroLightShift {
+       0%, 100% {
+         opacity: 1;
+         transform: scale(1);
+       }
+       50% {
+         opacity: 0.8;
+         transform: scale(1.05);
+       }
+     }
+     
+           .slideshow {
+       position: absolute;
+       top: 0;
+       left: 0;
+       width: 100%;
+       height: 100%;
+       z-index: 1;
+     }
+                                       .slide {
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         opacity: 0;
+         transition: opacity 1s ease-in-out;
+         background-size: cover;
+         background-position: center;
+         background-repeat: no-repeat;
+         filter: brightness(1.2) contrast(1.2) saturate(1.3);
+         border: 2px solid rgba(255, 215, 0, 0.3);
+         /* Ensure images load properly */
+         background-attachment: scroll;
+         /* Add fallback background */
+         background-color: #000000;
+       }
+          .slide.active {
+       opacity: 1;
+     }
+     
+     
+                   .slide-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.05) 50%, rgba(0, 0, 0, 0.1) 100%);
+        backdrop-filter: blur(0.5px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      /* Loading indicator */
+      .slideshow-loading {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #FFD700;
+        font-size: 1.2rem;
+        font-weight: bold;
+        z-index: 5;
+      }
+
+      /* Slideshow navigation dots */
+      .slideshow-dots {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 10px;
+        z-index: 10;
+      }
+
+      .dot {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: rgba(255, 215, 0, 0.5);
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .dot.active {
+        background: #FFD700;
+        transform: scale(1.2);
+      }
+     
+           .delivery-banner-section {
+       text-align: center;
+       padding: 20px;
+       background: #000000 !important;
+     }
+    .delivery-banner {
+      background: linear-gradient(135deg, #FFFF00 0%, #FFD700 100%);
+      color: black;
+      padding: 12px 30px;
+      border-radius: 25px;
+      box-shadow: 0 4px 15px rgba(255, 255, 0, 0.3);
+      overflow: hidden;
+      white-space: nowrap;
+      width: 400px;
+      margin: 0 auto;
+      display: inline-block;
+    }
+    .bullet-slideshow {
+      position: relative;
+      height: 100%;
+      overflow: hidden;
+    }
+    .bullet-slide {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.8s ease-in-out;
+    }
+    .bullet-slide.active {
+      opacity: 1;
+    }
+    .bullet-slide h3 {
+      margin: 0;
+      font-size: 0.9em;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      text-align: center;
+    }
+    
+    /* Mobile responsive adjustments */
+         @media (max-width: 768px) {
+       .hero {
+         height: 70vh;
+         padding-left: 3%;
+         padding-right: 3%;
+       }
+       .hero-content {
+         max-width: 100%;
+         padding: 30px 25px;
+       }
+       .hero-content h2 {
+         font-size: 2em;
+       }
+       .hero-content p {
+         font-size: 1em;
+       }
+               .slide {
+          background-size: contain;
+          background-position: center;
         }
-    </style>
+        
+        .slide-overlay {
+          background: linear-gradient(135deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.15) 50%, rgba(0, 0, 0, 0.3) 100%);
+          backdrop-filter: blur(1px);
+        }
+               header {
+          flex-direction: column;
+          gap: 10px;
+          padding: 15px;
+        }
+        
+        nav {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 10px;
+        }
+        
+        nav a {
+          margin-left: 0;
+          padding: 8px 12px;
+          border-radius: 5px;
+          background: rgba(255, 215, 0, 0.1);
+          border: 1px solid rgba(255, 215, 0, 0.3);
+          font-size: 0.85em;
+          min-width: 80px;
+          text-align: center;
+        }
+       .delivery-banner-section {
+         padding: 15px;
+       }
+       .delivery-banner {
+         padding: 10px 25px;
+         width: 300px;
+       }
+       .bullet-slide h3 {
+         font-size: 0.8em;
+         line-height: 1.2;
+       }
+     }
+    
+         @media (max-width: 480px) {
+       .hero {
+         height: 60vh;
+         padding-left: 2%;
+         padding-right: 2%;
+       }
+       .hero-content {
+         padding: 20px 15px;
+       }
+               .hero-content h2 {
+          font-size: 1.5em;
+          letter-spacing: 1px;
+        }
+        
+        .hero-content p {
+          font-size: 0.85em;
+          line-height: 1.4;
+        }
+       .hero-content p {
+         font-size: 0.9em;
+       }
+       .slide {
+         background-size: contain;
+         background-position: center;
+       }
+               header {
+          padding: 10px 15px;
+          gap: 10px;
+        }
+        
+        nav {
+          gap: 8px;
+        }
+        
+        nav a {
+          padding: 6px 10px;
+          font-size: 0.8em;
+          min-width: 70px;
+        }
+       .delivery-banner-section {
+         padding: 10px;
+       }
+               .delivery-banner {
+          padding: 8px 20px;
+          width: 250px;
+        }
+        
+        .scrolling-text {
+          font-size: 0.75em;
+          animation: scroll-left 15s linear infinite;
+        }
+       .bullet-slide h3 {
+         font-size: 0.7em;
+       }
+     }
+    .hero-content {
+      position: relative;
+      z-index: 10;
+      max-width: 600px;
+      background: rgba(0, 0, 0, 0.7);
+      padding: 40px;
+      border-radius: 15px;
+      backdrop-filter: blur(10px);
+      border: 2px solid rgba(255, 215, 0, 0.3);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    }
+    
+    .hero-content h2 {
+      font-size: 2.5em;
+      color: #FFD700;
+      text-shadow: 
+        0 0 10px rgba(255, 215, 0, 0.8),
+        0 0 20px rgba(255, 215, 0, 0.6),
+        0 0 30px rgba(255, 215, 0, 0.4),
+        2px 2px 4px rgba(0, 0, 0, 0.8);
+      font-weight: 900;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      animation: heroTextGlow 3s ease-in-out infinite alternate;
+      margin-bottom: 20px;
+    }
+    
+    .hero-content p {
+      font-size: 1.2em;
+      color: #ffffff;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+      font-weight: 500;
+      line-height: 1.6;
+      margin: 0;
+    }
+    
+    @keyframes heroTextGlow {
+      0% {
+        text-shadow: 
+          0 0 10px rgba(255, 215, 0, 0.8),
+          0 0 20px rgba(255, 215, 0, 0.6),
+          0 0 30px rgba(255, 215, 0, 0.4),
+          2px 2px 4px rgba(0, 0, 0, 0.8);
+      }
+      100% {
+        text-shadow: 
+          0 0 15px rgba(255, 215, 0, 1),
+          0 0 25px rgba(255, 215, 0, 0.8),
+          0 0 35px rgba(255, 215, 0, 0.6),
+          0 0 45px rgba(255, 215, 0, 0.4),
+          2px 2px 4px rgba(0, 0, 0, 0.8);
+      }
+    }
+    .section {
+      padding: 40px 20px;
+    }
+    .brands, .products, .categories {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+                   .brand, .product, .category {
+        background: #000000;
+        padding: 20px;
+        border-radius: 10px;
+        text-align: center;
+        width: 250px;
+        border: 1px solid #333;
+      }
+         .brand {
+       font-weight: bold;
+       color: #FFFF00;
+     }
+         .product h4 {
+       margin: 10px 0 5px;
+       color: #FFFF00;
+       font-size: 1.1em;
+     }
+                   .product-image {
+        margin-bottom: 10px;
+        background: #000000;
+        padding: 10px;
+        border-radius: 8px;
+      }
+    .product-description {
+      margin: 5px 0;
+      font-size: 0.8em;
+      color: #cbd5e1;
+      line-height: 1.3;
+      min-height: 40px;
+    }
+         .product-price {
+       margin: 8px 0 2px;
+       font-size: 1.1em;
+       font-weight: bold;
+       color: #FFFF00;
+     }
+    .product-volume {
+      margin: 0;
+      font-size: 0.8em;
+      color: #999;
+    }
+    .category-icon {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+         .category h4 {
+       margin: 10px 0 5px;
+       color: #FFFF00;
+       font-size: 1.1em;
+     }
+    .category p {
+      margin: 0;
+      font-size: 0.85em;
+      color: #cbd5e1;
+      line-height: 1.4;
+    }
+                                       footer {
+         background: #000000;
+         padding: 20px;
+         text-align: center;
+         font-size: 14px;
+         color: #999;
+         border-top: 1px solid #333;
+       }
+       
+       @media (max-width: 768px) {
+         footer {
+           padding: 15px;
+           font-size: 12px;
+         }
+       }
+       
+       @media (max-width: 480px) {
+         footer {
+           padding: 12px;
+           font-size: 11px;
+         }
+       }
+         @media (max-width: 600px) {
+       .brand, .product, .category {
+         width: 100%;
+       }
+       .hero-content h2 {
+         font-size: 1.8em;
+       }
+       
+       .products {
+         gap: 15px;
+       }
+       
+       .product {
+         padding: 15px;
+         border-radius: 8px;
+       }
+       
+       .product h4 {
+         font-size: 1em;
+       }
+       
+       .product-description {
+         font-size: 0.75em;
+         min-height: 35px;
+       }
+       
+       .product-price {
+         font-size: 1em;
+       }
+       
+       .product-volume {
+         font-size: 0.7em;
+       }
+     }
+         .container {
+       max-width: 1200px;
+       margin: auto;
+       padding: 0 20px;
+     }
+     
+     @keyframes scroll-left {
+       0% {
+         transform: translateX(100%);
+       }
+       100% {
+         transform: translateX(-100%);
+       }
+     }
+     
+           /* Brands Section Styling */
+      .brands-section {
+        background: #000000 !important;
+        padding: 40px 20px;
+        text-align: center;
+      }
+     
+     .brands-section h2 {
+       color: #FFD700;
+     }
+     
+     /* Customer Reviews Section Styling */
+     .reviews {
+       display: grid;
+       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+       gap: 25px;
+       margin-top: 30px;
+     }
+     
+           .review {
+        background: linear-gradient(135deg, #000000 0%, #111111 100%);
+        border: 1px solid #333;
+        border-radius: 15px;
+        padding: 25px;
+        box-shadow: 0 8px 25px rgba(255, 215, 0, 0.1);
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+      }
+     
+     .review::before {
+       content: '';
+       position: absolute;
+       top: 0;
+       left: 0;
+       right: 0;
+       height: 3px;
+       background: linear-gradient(90deg, #FFD700, #FFA500, #FFD700);
+       background-size: 200% 100%;
+       animation: gradientShift 3s ease-in-out infinite;
+     }
+     
+     .review:hover {
+       transform: translateY(-5px);
+       box-shadow: 0 15px 35px rgba(255, 215, 0, 0.2);
+       border-color: #FFD700;
+     }
+     
+     .review-header {
+       display: flex;
+       justify-content: space-between;
+       align-items: flex-start;
+       margin-bottom: 15px;
+     }
+     
+     .reviewer-info {
+       display: flex;
+       align-items: center;
+       gap: 12px;
+     }
+     
+     .reviewer-avatar {
+       font-size: 2.5em;
+       background: linear-gradient(135deg, #FFD700, #FFA500);
+       border-radius: 50%;
+       width: 50px;
+       height: 50px;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       color: #000;
+       font-weight: bold;
+     }
+     
+     .reviewer-details h4 {
+       margin: 0 0 5px 0;
+       color: #FFD700;
+       font-size: 1.1em;
+       font-weight: 600;
+     }
+     
+     .stars {
+       font-size: 1.1em;
+       color: #FFD700;
+     }
+     
+     .review-date {
+       color: #999;
+       font-size: 0.85em;
+       font-style: italic;
+     }
+     
+     .review-text {
+       color: #e2e8f0;
+       line-height: 1.6;
+       font-size: 0.95em;
+       margin: 0;
+       font-style: italic;
+     }
+     
+     .review-text::before {
+       content: '"';
+       font-size: 2em;
+       color: #FFD700;
+       font-family: serif;
+       line-height: 0;
+       margin-right: 5px;
+     }
+     
+     .review-text::after {
+       content: '"';
+       font-size: 2em;
+       color: #FFD700;
+       font-family: serif;
+       line-height: 0;
+       margin-left: 5px;
+     }
+     
+     @keyframes gradientShift {
+       0% { background-position: 0% 50%; }
+       100% { background-position: 100% 50%; }
+     }
+     
+           @media (max-width: 768px) {
+        .reviews {
+          grid-template-columns: 1fr;
+          gap: 20px;
+        }
+        
+        .review {
+          padding: 20px;
+        }
+        
+        .review-header {
+          flex-direction: column;
+          gap: 10px;
+        }
+        
+        .reviewer-avatar {
+          width: 40px;
+          height: 40px;
+          font-size: 2em;
+        }
+      }
+      
+      @media (max-width: 480px) {
+        .reviews {
+          gap: 15px;
+        }
+        
+        .review {
+          padding: 15px;
+        }
+        
+        .reviewer-avatar {
+          width: 35px;
+          height: 35px;
+          font-size: 1.8em;
+        }
+        
+        .reviewer-details h4 {
+          font-size: 1em;
+        }
+        
+        .review-text {
+          font-size: 0.9em;
+        }
+      }
+     
+     .brands-section h2 {
+       font-size: 2.5em;
+       margin-bottom: 30px;
+       text-transform: uppercase;
+       letter-spacing: 2px;
+       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+     }
+     
+     .brands-grid {
+       display: flex;
+       flex-wrap: wrap;
+       justify-content: center;
+       gap: 20px;
+       max-width: 800px;
+       margin: 0 auto;
+     }
+     
+           .brand-item {
+        background: #FFD700 !important;
+        color: black !important;
+        padding: 15px 25px;
+        border-radius: 15px;
+        font-weight: 900;
+        font-size: 1.1em;
+        text-align: center;
+        min-width: 120px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        transition: all 0.3s ease;
+        border: 2px solid rgba(255, 255, 255, 0.3);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        backdrop-filter: blur(5px);
+        cursor: pointer;
+      }
+     
+           .brand-item:hover {
+        background: #FFFF00 !important;
+        transform: translateY(-5px) scale(1.05);
+        box-shadow: 0 8px 25px rgba(255, 215, 0, 0.6);
+        border-color: rgba(255, 255, 255, 0.8);
+      }
+     
+     @media (max-width: 768px) {
+       .brands-section h2 {
+         font-size: 2em;
+       }
+       
+       .brands-grid {
+         gap: 15px;
+       }
+       
+       .brand-item {
+         padding: 12px 20px;
+         font-size: 1em;
+         min-width: 100px;
+       }
+     }
+     
+           @media (max-width: 480px) {
+        .brands-section h2 {
+          font-size: 1.5em;
+        }
+        
+        .brands-grid {
+          gap: 10px;
+        }
+        
+        .brand-item {
+          padding: 10px 15px;
+          font-size: 0.9em;
+          min-width: 80px;
+        }
+      }
+      
+      @media (max-width: 360px) {
+        .brands-section h2 {
+          font-size: 1.3em;
+          margin-bottom: 20px;
+        }
+        
+        .brands-grid {
+          gap: 8px;
+        }
+        
+        .brand-item {
+          padding: 8px 12px;
+          font-size: 0.8em;
+          min-width: 70px;
+        }
+      }
+
+     /* Brand-Wise Products Section Styles */
+     .brand-products-container {
+       display: flex;
+       flex-direction: column;
+       gap: 40px;
+       margin-top: 30px;
+     }
+
+     .brand-section {
+       background: linear-gradient(135deg, rgba(255, 215, 0, 0.05) 0%, rgba(255, 215, 0, 0.02) 100%);
+       border: 2px solid rgba(255, 215, 0, 0.2);
+       border-radius: 20px;
+       padding: 30px;
+       transition: all 0.3s ease;
+       backdrop-filter: blur(10px);
+     }
+
+     .brand-section:hover {
+       border-color: rgba(255, 215, 0, 0.4);
+       box-shadow: 0 10px 30px rgba(255, 215, 0, 0.1);
+       transform: translateY(-5px);
+     }
+
+     .brand-header {
+       text-align: center;
+       margin-bottom: 25px;
+       padding-bottom: 20px;
+       border-bottom: 2px solid rgba(255, 215, 0, 0.3);
+     }
+
+     .brand-header h3 {
+       color: #FFD700;
+       font-size: 2.2em;
+       font-weight: 900;
+       text-transform: uppercase;
+       letter-spacing: 2px;
+       margin: 0 0 10px 0;
+       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+     }
+
+     .brand-header p {
+       color: #e2e8f0;
+       font-size: 1.1em;
+       margin: 0;
+       font-style: italic;
+       opacity: 0.9;
+     }
+
+     .brand-products {
+       display: grid;
+       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+       gap: 25px;
+       align-items: start;
+     }
+
+     .brand-products .product {
+       background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
+       border: 2px solid rgba(255, 215, 0, 0.2);
+       border-radius: 15px;
+       padding: 20px;
+       text-align: center;
+       transition: all 0.3s ease;
+       backdrop-filter: blur(5px);
+       position: relative;
+       overflow: hidden;
+     }
+
+     .brand-products .product::before {
+       content: '';
+       position: absolute;
+       top: 0;
+       left: -100%;
+       width: 100%;
+       height: 100%;
+       background: linear-gradient(90deg, transparent, rgba(255, 215, 0, 0.1), transparent);
+       transition: left 0.5s ease;
+     }
+
+     .brand-products .product:hover::before {
+       left: 100%;
+     }
+
+     .brand-products .product:hover {
+       border-color: rgba(255, 215, 0, 0.6);
+       box-shadow: 0 8px 25px rgba(255, 215, 0, 0.2);
+       transform: translateY(-3px) scale(1.02);
+     }
+
+     .brand-products .product h4 {
+       color: #FFD700;
+       font-size: 1.3em;
+       font-weight: 700;
+       margin: 15px 0 10px 0;
+       text-transform: uppercase;
+       letter-spacing: 1px;
+     }
+
+     .brand-products .product-description {
+       color: #cbd5e0;
+       font-size: 0.95em;
+       line-height: 1.5;
+       margin: 10px 0;
+       font-style: italic;
+     }
+
+     .brand-products .product-price {
+       color: #FFD700;
+       font-size: 1.4em;
+       font-weight: 900;
+       margin: 10px 0 5px 0;
+       text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+     }
+
+     .brand-products .product-volume {
+       color: #a0aec0;
+       font-size: 0.9em;
+       font-weight: 600;
+       margin: 5px 0 0 0;
+       text-transform: uppercase;
+       letter-spacing: 0.5px;
+     }
+
+     .brand-products .product-image {
+       position: relative;
+       margin-bottom: 15px;
+       border-radius: 10px;
+       overflow: hidden;
+       background: rgba(255, 255, 255, 0.05);
+       padding: 10px;
+       border: 1px solid rgba(255, 215, 0, 0.2);
+     }
+
+     .brand-products .product-image img {
+       transition: all 0.3s ease;
+       filter: brightness(1.1) contrast(1.1);
+     }
+
+     .brand-products .product:hover .product-image img {
+       transform: scale(1.05);
+       filter: brightness(1.2) contrast(1.2);
+     }
+
+     /* Mobile Responsive for Brand Products */
+     @media (max-width: 768px) {
+       .brand-products-container {
+         gap: 30px;
+         margin-top: 20px;
+       }
+
+       .brand-section {
+         padding: 20px;
+         border-radius: 15px;
+       }
+
+       .brand-header h3 {
+         font-size: 1.8em;
+         letter-spacing: 1px;
+       }
+
+       .brand-header p {
+         font-size: 1em;
+       }
+
+       .brand-products {
+         grid-template-columns: 1fr;
+         gap: 20px;
+       }
+
+       .brand-products .product {
+         padding: 15px;
+       }
+
+       .brand-products .product h4 {
+         font-size: 1.2em;
+       }
+
+       .brand-products .product-price {
+         font-size: 1.3em;
+       }
+     }
+
+     @media (max-width: 480px) {
+       .brand-section {
+         padding: 15px;
+         border-radius: 12px;
+       }
+
+       .brand-header h3 {
+         font-size: 1.5em;
+       }
+
+       .brand-header p {
+         font-size: 0.9em;
+       }
+
+       .brand-products .product {
+         padding: 12px;
+       }
+
+       .brand-products .product h4 {
+         font-size: 1.1em;
+       }
+
+       .brand-products .product-description {
+         font-size: 0.9em;
+       }
+
+                .brand-products .product-price {
+           font-size: 1.2em;
+         }
+       }
+
+               /* Brand Modal Styles */
+        .brand-modal {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          z-index: 10000;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          opacity: 0;
+          visibility: hidden;
+          transition: all 0.3s ease;
+        }
+
+        .brand-modal.modal-show {
+          opacity: 1;
+          visibility: visible;
+        }
+
+        .brand-modal.modal-closing {
+          opacity: 0;
+          visibility: hidden;
+        }
+
+        .modal-overlay {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: rgba(0, 0, 0, 0.8);
+          backdrop-filter: blur(5px);
+        }
+
+        .modal-content {
+          position: relative;
+          background: linear-gradient(135deg, #000000 0%, #111111 100%);
+          border: 2px solid #FFD700;
+          border-radius: 20px;
+          max-width: 800px;
+          width: 90%;
+          max-height: 90vh;
+          overflow-y: auto;
+          box-shadow: 0 20px 60px rgba(255, 215, 0, 0.3);
+          transform: scale(0.7);
+          transition: transform 0.3s ease;
+        }
+
+        .brand-modal.modal-show .modal-content {
+          transform: scale(1);
+        }
+
+        .modal-header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 25px 30px;
+          border-bottom: 2px solid rgba(255, 215, 0, 0.3);
+          background: linear-gradient(135deg, rgba(255, 215, 0, 0.1) 0%, rgba(255, 215, 0, 0.05) 100%);
+        }
+
+        .modal-header h2 {
+          color: #FFD700;
+          font-size: 2.5em;
+          font-weight: 900;
+          text-transform: uppercase;
+          letter-spacing: 2px;
+          margin: 0;
+          text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+        }
+
+        .modal-close {
+          background: none;
+          border: 2px solid #FFD700;
+          color: #FFD700;
+          font-size: 2em;
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          transition: all 0.3s ease;
+          font-weight: bold;
+        }
+
+        .modal-close:hover {
+          background: #FFD700;
+          color: #000;
+          transform: scale(1.1);
+        }
+
+        .modal-body {
+          padding: 30px;
+        }
+
+        .brand-info-grid {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 30px;
+          margin-bottom: 30px;
+        }
+
+        .brand-image-section {
+          text-align: center;
+        }
+
+        .brand-modal-image {
+          width: 100%;
+          max-width: 300px;
+          height: 200px;
+          object-fit: contain;
+          border-radius: 15px;
+          border: 2px solid rgba(255, 215, 0, 0.3);
+          margin-bottom: 20px;
+          background: rgba(255, 255, 255, 0.05);
+          padding: 10px;
+        }
+
+        .brand-description {
+          color: #e2e8f0;
+          font-size: 1.1em;
+          line-height: 1.6;
+          font-style: italic;
+          margin: 0;
+        }
+
+        .brand-details-section {
+          display: flex;
+          flex-direction: column;
+          gap: 25px;
+        }
+
+        .features-section, .products-section {
+          background: rgba(255, 215, 0, 0.05);
+          border: 1px solid rgba(255, 215, 0, 0.2);
+          border-radius: 15px;
+          padding: 20px;
+        }
+
+        .features-section h3, .products-section h3 {
+          color: #FFD700;
+          font-size: 1.3em;
+          font-weight: 700;
+          margin: 0 0 15px 0;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+        }
+
+        .features-list, .products-list {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+        }
+
+        .features-list li, .products-list li {
+          color: #cbd5e0;
+          padding: 8px 0;
+          border-bottom: 1px solid rgba(255, 215, 0, 0.1);
+          position: relative;
+          padding-left: 20px;
+        }
+
+        .features-list li:before, .products-list li:before {
+          content: '✓';
+          color: #FFD700;
+          position: absolute;
+          left: 0;
+          font-weight: bold;
+        }
+
+                 .features-list li:last-child, .products-list li:last-child {
+           border-bottom: none;
+         }
+
+         /* Modal Products Grid Styles */
+         .modal-products-grid {
+           display: grid;
+           grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+           gap: 15px;
+           margin-top: 15px;
+         }
+
+         .modal-product-card {
+           background: rgba(255, 215, 0, 0.05);
+           border: 1px solid rgba(255, 215, 0, 0.2);
+           border-radius: 10px;
+           padding: 15px;
+           text-align: center;
+           transition: all 0.3s ease;
+         }
+
+         .modal-product-card:hover {
+           border-color: rgba(255, 215, 0, 0.4);
+           box-shadow: 0 5px 15px rgba(255, 215, 0, 0.2);
+           transform: translateY(-2px);
+         }
+
+         .modal-product-image {
+           margin-bottom: 10px;
+           height: 80px;
+           display: flex;
+           align-items: center;
+           justify-content: center;
+         }
+
+         .modal-product-image img {
+           max-width: 100%;
+           max-height: 100%;
+           object-fit: contain;
+           border-radius: 5px;
+         }
+
+         .modal-product-info h4 {
+           color: #FFD700;
+           font-size: 0.9em;
+           font-weight: 700;
+           margin: 0 0 5px 0;
+           text-transform: uppercase;
+           letter-spacing: 0.5px;
+         }
+
+         .modal-product-price {
+           color: #FFD700;
+           font-size: 1em;
+           font-weight: 900;
+           margin: 5px 0 2px 0;
+         }
+
+         .modal-product-volume {
+           color: #a0aec0;
+           font-size: 0.8em;
+           font-weight: 600;
+           margin: 0;
+           text-transform: uppercase;
+           letter-spacing: 0.5px;
+         }
+
+         .modal-actions {
+          display: flex;
+          gap: 15px;
+          justify-content: center;
+          padding-top: 20px;
+          border-top: 2px solid rgba(255, 215, 0, 0.3);
+        }
+
+        .btn-close-modal {
+          padding: 12px 25px;
+          border: 2px solid #FFD700;
+          border-radius: 25px;
+          font-size: 1em;
+          font-weight: 700;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          cursor: pointer;
+          transition: all 0.3s ease;
+          min-width: 120px;
+          background: transparent;
+          color: #FFD700;
+        }
+
+        .btn-close-modal:hover {
+          background: #FFD700;
+          color: #000;
+          transform: translateY(-2px);
+        }
+
+        /* Brand Button Animations and Notifications */
+        @keyframes brandHighlight {
+          0% {
+            border-color: rgba(255, 215, 0, 0.2);
+            box-shadow: 0 10px 30px rgba(255, 215, 0, 0.1);
+          }
+          50% {
+            border-color: rgba(255, 215, 0, 0.8);
+            box-shadow: 0 15px 40px rgba(255, 215, 0, 0.4);
+            transform: translateY(-8px);
+          }
+          100% {
+            border-color: rgba(255, 215, 0, 0.2);
+            box-shadow: 0 10px 30px rgba(255, 215, 0, 0.1);
+          }
+        }
+
+        @keyframes slideInRight {
+          from {
+            transform: translateX(100%);
+            opacity: 0;
+          }
+          to {
+            transform: translateX(0);
+            opacity: 1;
+          }
+        }
+
+       /* Enhanced brand button interactions */
+       .brand-item {
+         cursor: pointer;
+         user-select: none;
+         position: relative;
+         overflow: hidden;
+       }
+
+       .brand-item::before {
+         content: '';
+         position: absolute;
+         top: 0;
+         left: -100%;
+         width: 100%;
+         height: 100%;
+         background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+         transition: left 0.5s ease;
+       }
+
+       .brand-item:hover::before {
+         left: 100%;
+       }
+
+               .brand-item:active {
+          transform: translateY(-2px) scale(0.98);
+        }
+        
+        /* Mobile touch optimizations */
+        @media (max-width: 768px) {
+          /* Improve touch targets */
+          .brand-item, .product, .modal-close, .btn-close-modal {
+            min-height: 44px;
+            min-width: 44px;
+          }
+          
+          /* Disable hover effects on touch devices */
+          .brand-item:hover {
+            transform: none;
+          }
+          
+          .product:hover {
+            transform: none;
+          }
+          
+          /* Improve scrolling performance */
+          .modal-content {
+            -webkit-overflow-scrolling: touch;
+          }
+          
+          /* Optimize animations for mobile */
+          .brand-item, .product, .modal-product-card {
+            transition: all 0.2s ease;
+          }
+        }
+
+               /* Mobile responsive for modal */
+        @media (max-width: 768px) {
+          .modal-content {
+            width: 95%;
+            max-height: 95vh;
+            margin: 10px;
+          }
+
+          .modal-header {
+            padding: 20px;
+          }
+
+          .modal-header h2 {
+            font-size: 2em;
+          }
+
+          .modal-close {
+            width: 40px;
+            height: 40px;
+            font-size: 1.5em;
+          }
+
+          .modal-body {
+            padding: 20px;
+          }
+
+          .brand-info-grid {
+            grid-template-columns: 1fr;
+            gap: 20px;
+          }
+
+          .brand-modal-image {
+            max-width: 250px;
+            height: 150px;
+          }
+
+          .brand-description {
+            font-size: 1em;
+          }
+
+          .features-section, .products-section {
+            padding: 15px;
+          }
+
+          .features-section h3, .products-section h3 {
+            font-size: 1.1em;
+          }
+
+          .modal-actions {
+            flex-direction: column;
+            gap: 10px;
+          }
+
+          .btn-close-modal {
+            width: 100%;
+            padding: 15px;
+          }
+        }
+
+                 @media (max-width: 480px) {
+           .modal-header h2 {
+             font-size: 1.5em;
+           }
+ 
+           .brand-modal-image {
+             max-width: 200px;
+             height: 120px;
+           }
+ 
+                      .features-list li, .products-list li {
+              font-size: 0.9em;
+              padding: 6px 0;
+            }
+ 
+            .modal-products-grid {
+              grid-template-columns: 1fr;
+              gap: 10px;
+            }
+ 
+            .modal-product-card {
+              padding: 12px;
+            }
+ 
+            .modal-product-image {
+              height: 60px;
+            }
+ 
+            .modal-product-info h4 {
+              font-size: 0.8em;
+            }
+ 
+            .modal-product-price {
+              font-size: 0.9em;
+            }
+ 
+            .modal-product-volume {
+              font-size: 0.7em;
+            }
+          }
+          
+          @media (max-width: 360px) {
+            .modal-content {
+              width: 98%;
+              margin: 5px;
+            }
+            
+            .modal-header {
+              padding: 15px;
+            }
+            
+            .modal-header h2 {
+              font-size: 1.3em;
+            }
+            
+            .modal-close {
+              width: 35px;
+              height: 35px;
+              font-size: 1.3em;
+            }
+            
+            .modal-body {
+              padding: 15px;
+            }
+            
+            .brand-modal-image {
+              max-width: 180px;
+              height: 100px;
+            }
+            
+            .brand-description {
+              font-size: 0.9em;
+            }
+            
+            .features-section h3, .products-section h3 {
+              font-size: 1em;
+            }
+            
+            .features-list li, .products-list li {
+              font-size: 0.8em;
+              padding: 5px 0;
+            }
+            
+            .modal-product-card {
+              padding: 10px;
+            }
+            
+            .modal-product-image {
+              height: 50px;
+            }
+            
+            .modal-product-info h4 {
+              font-size: 0.75em;
+            }
+            
+            .modal-product-price {
+              font-size: 0.8em;
+            }
+            
+            .modal-product-volume {
+              font-size: 0.65em;
+            }
+          }
+  </style>
 </head>
 <body>
-    <div class="test-box">
-        <h1>CSS Test Page</h1>
-        <p>If you can see this red box, CSS is working!</p>
-        <p>If the page looks unstyled, there's a CSS loading issue.</p>
+
+     <header>
+     <div class="logo">
+       <img src="brand logos/auto-champian-logo.jpg.jfif" alt="Auto Champain Logo" class="logo-image">
+       <h1>Auto Champain</h1>
+     </div>
+     <nav>
+       <a href="index.html">Home</a>
+       <a href="shop.html">Shop</a>
+       <a href="special-bundles.html">Special Bundles</a>
+       <a href="about.html">About</a>
+       <a href="contact.html">Contact</a>
+     </nav>
+   </header>
+
+     <!-- Our Brands Section -->
+   <section class="brands-section">
+     <div class="container">
+       <h2>OUR BRANDS</h2>
+       <div class="brands-grid">
+         <div class="brand-item" data-brand="wd40">WD-40</div>
+         <div class="brand-item" data-brand="formula1">FORMULA 1</div>
+         <div class="brand-item" data-brand="aim">AIM</div>
+         <div class="brand-item" data-brand="dtr">DTR</div>
+         <div class="brand-item" data-brand="areon">AREON</div>
+       </div>
+     </div>
+   </section>
+
+
+
+                       <section class="hero">
+       <div class="slideshow">
+         <div class="slideshow-loading">Loading Premium Products...</div>
+         <div class="slide active" style="background-image: url('./Annotation 2025-08-07 235825.png')">
+           <div class="slide-overlay"></div>
+         </div>
+         <div class="slide" style="background-image: url('./Annotation 2025-08-07 232957.png')">
+           <div class="slide-overlay"></div>
+         </div>
+         <div class="slide" style="background-image: url('./Annotation 2025-08-07 233024.png')">
+           <div class="slide-overlay"></div>
+         </div>
+         <div class="slide" style="background-image: url('./Annotation 2025-08-07 232809.png')">
+           <div class="slide-overlay"></div>
+         </div>
+         <div class="slide" style="background-image: url('./Annotation 2025-08-07 232741.png')">
+           <div class="slide-overlay"></div>
+         </div>
+         <div class="slide" style="background-image: url('./Annotation 2025-08-07 232705.png')">
+           <div class="slide-overlay"></div>
+         </div>
+         <div class="slide" style="background-image: url('./Annotation 2025-08-07 232642.png')">
+           <div class="slide-overlay"></div>
+         </div>
+         <div class="slide" style="background-image: url('./Annotation 2025-08-07 232558.png')">
+           <div class="slide-overlay"></div>
+         </div>
+         <div class="slide" style="background-image: url('./Annotation 2025-08-07 232329.png')">
+           <div class="slide-overlay"></div>
+         </div>
+         <div class="slide" style="background-image: url('./Annotation 2025-08-07 232212.png')">
+           <div class="slide-overlay"></div>
+         </div>
+         <div class="slide" style="background-image: url('./Complete Car Care Kit.jpg')">
+           <div class="slide-overlay"></div>
+         </div>
+         <div class="slide" style="background-image: url('./Premium Detailing Kit.jpg')">
+           <div class="slide-overlay"></div>
+         </div>
+         <div class="slide" style="background-image: url('./Engine Care Combo.jpg')">
+           <div class="slide-overlay"></div>
+         </div>
+         <div class="slide" style="background-image: url('./Interior Care Package.jpg')">
+           <div class="slide-overlay"></div>
+         </div>
+         
+         <!-- Navigation dots -->
+         <div class="slideshow-dots">
+           <span class="dot active"></span>
+           <span class="dot"></span>
+           <span class="dot"></span>
+           <span class="dot"></span>
+           <span class="dot"></span>
+           <span class="dot"></span>
+           <span class="dot"></span>
+           <span class="dot"></span>
+           <span class="dot"></span>
+           <span class="dot"></span>
+           <span class="dot"></span>
+           <span class="dot"></span>
+           <span class="dot"></span>
+           <span class="dot"></span>
+           <span class="dot"></span>
+         </div>
+       </div>
+       
+       
+
+     </section>
+
+     <!-- Delivery Banner Section -->
+   <div style="background: #000000 !important; color: #FFD700; text-align: center; padding: 8px; font-weight: bold; font-size: 0.9em; text-transform: uppercase; letter-spacing: 0.5px; overflow: hidden; white-space: nowrap;">
+    <div class="scrolling-text" style="display: inline-block; animation: scroll-left 20s linear infinite;">
+      🚚 DELIVERY ALL OVER PAKISTAN • ⚡ FAST SHIPPING • 📦 FREE DELIVERY ON ORDERS ABOVE ₨2000 • 🏪 CASH ON DELIVERY AVAILABLE • 🕒 SAME DAY DELIVERY • 📱 TRACK YOUR ORDER ONLINE • 🚛 PROFESSIONAL DELIVERY PARTNERS • 💎 QUALITY GUARANTEED
     </div>
-    
-    <!-- Test the actual KSM styles -->
-    <header class="header">
-        <div class="container">
-            <div class="logo">
-                <h1>KSM ENTERPRISES</h1>
-            </div>
+  </div>
+
+
+
+  <section class="section container">
+    <h2>Top Products</h2>
+    <div class="products">
+             <div class="product">
+                   <div class="product-image">
+            <img src="JS files/WD-40.jpg" alt="WD-40 Multi-Function Product" style="width: 100%; height: 120px; object-fit: contain; border-radius: 8px;">
+                  </div>
+         <h4>WD-40 Multi-Function</h4>
+         <p class="product-description">Eliminates squeaks, displaces moisture, cleans & protects</p>
+         <p class="product-price">₨ 450</p>
+         <p class="product-volume">200ml</p>
+                     </div>
+       <div class="product">
+         <div class="product-image">
+           <img src="products/MICRO FIBER CLOTHES/MICROFIBER TOWEL PACK OF 4.jpeg" alt="Aim Microfiber Towel Pack" style="width: 100%; height: 120px; object-fit: contain; border-radius: 8px;">
+                     </div>
+         <h4>Aim Microfiber Towel</h4>
+         <p class="product-description">Value Pack! Pack of 4 - High Performance Microfiber</p>
+         <p class="product-price">₨ 650</p>
+         <p class="product-volume">4 Pack</p>
+                     </div>
+       <div class="product">
+         <div class="product-image">
+           <img src="products/CAR POLISH & SHINNERS/aim tire gel 500ml.jpeg" alt="Aim Tire Gel" style="width: 100%; height: 120px; object-fit: contain; border-radius: 8px;">
+                 </div>
+         <h4>Aim Tire Gel</h4>
+         <p class="product-description">Moistening, lustrous, durable - Creates long lasting high gloss wet look</p>
+         <p class="product-price">₨ 550</p>
+         <p class="product-volume">500ml</p>
+       </div>
+       <div class="product">
+                   <div class="product-image">
+                        <img src="products/CAR PROCTING SPRAYS/formulla 1 protectant spray 295ml.jpeg" alt="Formula 1 Protectant Spray" style="width: 100%; height: 120px; object-fit: contain; border-radius: 8px;">
+          </div>
+         <h4>Formula 1 Protectant Spray</h4>
+         <p class="product-description">Shines, protects & freshens with Cherry Fragrance</p>
+         <p class="product-price">₨ 425</p>
+         <p class="product-volume">295ml</p>
+             </div>
         </div>
-    </header>
-    
-    <div style="padding: 50px; text-align: center;">
-        <h2>KSM Header Test</h2>
-        <p>If you see a black header with white text above, the KSM CSS is loading correctly.</p>
+    </section>
+
+  
+
+  <!-- Customer Reviews Section -->
+  <section class="section container">
+    <h2>What Our Customers Say</h2>
+    <div class="reviews">
+      <div class="review">
+        <div class="review-header">
+          <div class="reviewer-info">
+            <div class="reviewer-avatar">👤</div>
+            <div class="reviewer-details">
+              <h4>Ahmed Khan</h4>
+              <div class="stars">⭐⭐⭐⭐⭐</div>
+            </div>
+          </div>
+          <div class="review-date">2 days ago</div>
+        </div>
+        <p class="review-text">"Excellent quality products! The Formula 1 protectant spray works wonders on my car's interior. Fast delivery and great customer service. Highly recommended!"</p>
+      </div>
+      
+      <div class="review">
+        <div class="review-header">
+          <div class="reviewer-info">
+            <div class="reviewer-avatar">👤</div>
+            <div class="reviewer-details">
+              <h4>Fatima Ali</h4>
+              <div class="stars">⭐⭐⭐⭐⭐</div>
+            </div>
+          </div>
+          <div class="review-date">1 week ago</div>
+        </div>
+        <p class="review-text">"The microfiber towels are amazing! They don't leave any scratches and absorb water perfectly. My car has never looked better!"</p>
+      </div>
+      
+      <div class="review">
+        <div class="review-header">
+          <div class="reviewer-info">
+            <div class="reviewer-avatar">👤</div>
+            <div class="reviewer-details">
+              <h4>Muhammad Hassan</h4>
+              <div class="stars">⭐⭐⭐⭐⭐</div>
+            </div>
+          </div>
+          <div class="review-date">3 weeks ago</div>
+        </div>
+        <p class="review-text">"Auto Champain products are the real deal! The tire gel gives my car that showroom shine. Professional quality at reasonable prices."</p>
+      </div>
+      
+      <div class="review">
+        <div class="review-header">
+          <div class="reviewer-info">
+            <div class="reviewer-avatar">👤</div>
+            <div class="reviewer-details">
+              <h4>Ayesha Malik</h4>
+              <div class="stars">⭐⭐⭐⭐⭐</div>
+            </div>
+          </div>
+          <div class="review-date">1 month ago</div>
+        </div>
+        <p class="review-text">"Outstanding service! The complete car care kit saved me money and time. All products work perfectly together. Will definitely order again!"</p>
+      </div>
     </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Auto Champain. All rights reserved.
+    </footer>
+
+    <script>
+    // Hero slideshow functionality with image loading error handling
+    const slides = document.querySelectorAll('.slide');
+    const dots = document.querySelectorAll('.dot');
+    const loadingIndicator = document.querySelector('.slideshow-loading');
+    let currentSlide = 0;
+    let imagesLoaded = 0;
+    const totalImages = slides.length;
+
+    // Function to handle image loading errors
+    function handleImageError(slideElement) {
+      // Set a fallback background color or gradient
+      slideElement.style.background = 'linear-gradient(135deg, #000000 0%, #1a1a1a 100%)';
+      slideElement.style.backgroundImage = 'none';
+      
+      // Add a fallback text
+      const overlay = slideElement.querySelector('.slide-overlay');
+      if (overlay) {
+        overlay.innerHTML = '<div style="display: flex; align-items: center; justify-content: center; height: 100%; color: #FFD700; font-size: 2rem; font-weight: bold;">Premium Car Care Products</div>';
+      }
+    }
+
+    // Function to update dots
+    function updateDots() {
+      dots.forEach((dot, index) => {
+        dot.classList.toggle('active', index === currentSlide);
+      });
+    }
+
+    // Check if images are loading properly
+    slides.forEach((slide, index) => {
+      const backgroundImage = slide.style.backgroundImage;
+      if (backgroundImage) {
+        const url = backgroundImage.replace(/url\(['"]?(.*?)['"]?\)/i, '$1');
+        const img = new Image();
+        img.onload = function() {
+          console.log(`Slide ${index + 1} image loaded successfully`);
+          imagesLoaded++;
+          if (imagesLoaded === totalImages) {
+            // All images loaded, hide loading indicator
+            if (loadingIndicator) {
+              loadingIndicator.style.display = 'none';
+            }
+          }
+        };
+        img.onerror = function() {
+          console.warn(`Slide ${index + 1} image failed to load: ${url}`);
+          handleImageError(slide);
+          imagesLoaded++;
+          if (imagesLoaded === totalImages) {
+            // All images processed, hide loading indicator
+            if (loadingIndicator) {
+              loadingIndicator.style.display = 'none';
+            }
+          }
+        };
+        img.src = url;
+      }
+    });
+
+    function nextSlide() {
+      slides[currentSlide].classList.remove('active');
+      currentSlide = (currentSlide + 1) % slides.length;
+      slides[currentSlide].classList.add('active');
+      updateDots();
+    }
+
+    function prevSlide() {
+      slides[currentSlide].classList.remove('active');
+      currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+      slides[currentSlide].classList.add('active');
+      updateDots();
+    }
+
+    // Add click handlers to dots
+    dots.forEach((dot, index) => {
+      dot.addEventListener('click', () => {
+        slides[currentSlide].classList.remove('active');
+        currentSlide = index;
+        slides[currentSlide].classList.add('active');
+        updateDots();
+      });
+    });
+
+         // Change slide every 3 seconds
+     let slideInterval = setInterval(nextSlide, 3000);
+ 
+     // Add touch/swipe support for mobile
+     let touchStartX = 0;
+     let touchEndX = 0;
+     let isMobile = window.innerWidth <= 768;
+ 
+     // Optimize for mobile devices
+     if (isMobile) {
+       // Disable auto-advance on mobile for better user control
+       clearInterval(slideInterval);
+       
+       // Add manual slide advancement
+       slideInterval = setInterval(nextSlide, 5000);
+     }
+ 
+     document.querySelector('.slideshow').addEventListener('touchstart', e => {
+       touchStartX = e.changedTouches[0].screenX;
+     });
+ 
+     document.querySelector('.slideshow').addEventListener('touchend', e => {
+       touchEndX = e.changedTouches[0].screenX;
+       handleSwipe();
+     });
+
+    function handleSwipe() {
+      const swipeThreshold = 50;
+      const diff = touchStartX - touchEndX;
+      
+      if (Math.abs(diff) > swipeThreshold) {
+        if (diff > 0) {
+          // Swipe left - next slide
+          nextSlide();
+        } else {
+          // Swipe right - previous slide
+          prevSlide();
+        }
+      }
+    }
+
+    // Add keyboard navigation
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft') {
+        prevSlide();
+      } else if (e.key === 'ArrowRight') {
+        nextSlide();
+      }
+    });
+
+         // Initialize dots
+     updateDots();
+
+     // Brand button functionality
+     document.addEventListener('DOMContentLoaded', function() {
+       const brandItems = document.querySelectorAll('.brand-item');
+       
+       brandItems.forEach(item => {
+         item.addEventListener('click', function() {
+           const brand = this.getAttribute('data-brand');
+           handleBrandClick(brand);
+         });
+       });
+     });
+
+           function handleBrandClick(brand) {
+        // Add haptic feedback if supported
+        if (navigator.vibrate) {
+          navigator.vibrate(50);
+        }
+
+        // Show brand modal
+        showBrandModal(brand);
+      }
+
+             function showBrandModal(brand) {
+         // Brand information data with all products from BRANDWISE PRODUCTS folders
+         const brandInfo = {
+           wd40: {
+             name: "WD-40",
+             description: "Multi-purpose lubricants and protectants",
+             features: ["Eliminates squeaks", "Displaces moisture", "Cleans & protects", "Fast-drying", "Non-conductive", "Multi-purpose", "Long-lasting protection"],
+             products: [
+               { name: "WD-40 Multi-Purpose", price: "₨ 450", volume: "200ml", image: "BRANDWISE PRODUCTS/WD-40/WhatsApp Image 2025-08-01 at 11.11.51 AM.jpeg" },
+               { name: "WD-40 Specialist", price: "₨ 550", volume: "300ml", image: "BRANDWISE PRODUCTS/WD-40/WhatsApp Image 2025-08-01 at 11.11.52 AM.jpeg" },
+               { name: "WD-40 Multi-Function Product", price: "₨ 450", volume: "200ml", image: "BRANDWISE PRODUCTS/WD-40/WhatsApp Image 2025-08-01 at 11.11.53 AM.jpeg" },
+               { name: "WD-40 Contact Cleaner", price: "₨ 650", volume: "250ml", image: "BRANDWISE PRODUCTS/WD-40/WhatsApp Image 2025-08-01 at 11.11.54 AM.jpeg" },
+               { name: "WD-40 Silicone Spray", price: "₨ 480", volume: "200ml", image: "BRANDWISE PRODUCTS/WD-40/WhatsApp Image 2025-08-01 at 11.11.55 AM.jpeg" },
+               { name: "WD-40 Penetrating Oil", price: "₨ 520", volume: "150ml", image: "BRANDWISE PRODUCTS/WD-40/WhatsApp Image 2025-08-01 at 11.11.56 AM.jpeg" },
+               { name: "WD-40 Chain Lube", price: "₨ 580", volume: "200ml", image: "BRANDWISE PRODUCTS/WD-40/WhatsApp Image 2025-08-01 at 11.11.57 AM.jpeg" },
+               { name: "WD-40 Bike Care", price: "₨ 420", volume: "100ml", image: "BRANDWISE PRODUCTS/WD-40/WhatsApp Image 2025-08-01 at 11.11.58 AM.jpeg" }
+             ],
+             image: "BRANDWISE PRODUCTS/WD-40/WhatsApp Image 2025-08-01 at 11.11.51 AM.jpeg"
+           },
+           formula1: {
+             name: "Formula 1",
+             description: "Professional car care and protection",
+             features: ["Long-lasting protection", "Deep shine", "Cherry fragrance", "Professional grade", "UV protection", "Easy application", "Water repellent"],
+             products: [
+               { name: "Formula 1 Car Wash", price: "₨ 850", volume: "1 Liter", image: "BRANDWISE PRODUCTS/Formula 1/WhatsApp Image 2025-08-01 at 11.11.23 AM.jpeg" },
+               { name: "Formula 1 Wax", price: "₨ 950", volume: "500ml", image: "BRANDWISE PRODUCTS/Formula 1/WhatsApp Image 2025-08-01 at 11.11.24 AM.jpeg" },
+               { name: "Formula 1 Protectant Spray", price: "₨ 425", volume: "295ml", image: "BRANDWISE PRODUCTS/Formula 1/WhatsApp Image 2025-08-01 at 11.11.25 AM.jpeg" },
+               { name: "Formula 1 Interior Cleaner", price: "₨ 650", volume: "500ml", image: "BRANDWISE PRODUCTS/Formula 1/WhatsApp Image 2025-08-01 at 11.11.26 AM.jpeg" },
+               { name: "Formula 1 Tire Shine", price: "₨ 550", volume: "400ml", image: "BRANDWISE PRODUCTS/Formula 1/WhatsApp Image 2025-08-01 at 11.11.27 AM.jpeg" },
+               { name: "Formula 1 Glass Cleaner", price: "₨ 380", volume: "295ml", image: "BRANDWISE PRODUCTS/Formula 1/WhatsApp Image 2025-08-01 at 11.11.28 AM.jpeg" },
+               { name: "Formula 1 Dashboard Polish", price: "₨ 480", volume: "400ml", image: "BRANDWISE PRODUCTS/Formula 1/WhatsApp Image 2025-08-01 at 11.11.29 AM.jpeg" },
+               { name: "Formula 1 Engine Cleaner", price: "₨ 720", volume: "500ml", image: "BRANDWISE PRODUCTS/Formula 1/WhatsApp Image 2025-08-01 at 11.11.30 AM.jpeg" }
+             ],
+             image: "BRANDWISE PRODUCTS/Formula 1/WhatsApp Image 2025-08-01 at 11.11.23 AM.jpeg"
+           },
+           aim: {
+             name: "AIM",
+             description: "Premium car care and detailing products",
+             features: ["High performance", "Scratch-free", "Super absorbent", "Value packs", "Professional quality", "Durable", "Eco-friendly"],
+             products: [
+               { name: "AIM Car Polish", price: "₨ 1200", volume: "500ml", image: "BRANDWISE PRODUCTS/AIm/WhatsApp Image 2025-08-01 at 11.11.31 AM.jpeg" },
+               { name: "AIM Interior Cleaner", price: "₨ 750", volume: "500ml", image: "BRANDWISE PRODUCTS/AIm/WhatsApp Image 2025-08-01 at 11.11.32 AM.jpeg" },
+               { name: "AIM Microfiber Towel Pack", price: "₨ 650", volume: "4 Pack", image: "BRANDWISE PRODUCTS/AIm/WhatsApp Image 2025-08-01 at 11.11.33 AM.jpeg" },
+               { name: "AIM Tire Gel", price: "₨ 550", volume: "500ml", image: "BRANDWISE PRODUCTS/AIm/WhatsApp Image 2025-08-01 at 11.11.34 AM.jpeg" },
+               { name: "AIM Glass Cleaner", price: "₨ 450", volume: "500ml", image: "BRANDWISE PRODUCTS/AIm/WhatsApp Image 2025-08-01 at 11.11.35 AM.jpeg" },
+               { name: "AIM Dashboard Polish", price: "₨ 600", volume: "400ml", image: "BRANDWISE PRODUCTS/AIm/WhatsApp Image 2025-08-01 at 11.11.36 AM.jpeg" },
+               { name: "AIM Car Shampoo", price: "₨ 480", volume: "500ml", image: "BRANDWISE PRODUCTS/AIm/WhatsApp Image 2025-08-01 at 11.11.37 AM.jpeg" },
+               { name: "AIM Wheel Cleaner", price: "₨ 520", volume: "500ml", image: "BRANDWISE PRODUCTS/AIm/WhatsApp Image 2025-08-01 at 11.11.38 AM.jpeg" },
+               { name: "AIM Engine Degreaser", price: "₨ 680", volume: "500ml", image: "BRANDWISE PRODUCTS/AIm/WhatsApp Image 2025-08-01 at 11.11.39 AM.jpeg" },
+               { name: "AIM Brake Cleaner", price: "₨ 420", volume: "400ml", image: "BRANDWISE PRODUCTS/AIm/WhatsApp Image 2025-08-01 at 11.11.40 AM.jpeg" },
+               { name: "AIM Contact Cleaner", price: "₨ 380", volume: "200ml", image: "BRANDWISE PRODUCTS/AIm/WhatsApp Image 2025-08-01 at 11.11.41 AM.jpeg" },
+               { name: "AIM Carburetor Cleaner", price: "₨ 450", volume: "300ml", image: "BRANDWISE PRODUCTS/AIm/WhatsApp Image 2025-08-01 at 11.11.42 AM.jpeg" },
+               { name: "AIM Air Freshener", price: "₨ 320", volume: "100ml", image: "BRANDWISE PRODUCTS/AIm/WhatsApp Image 2025-08-01 at 11.11.43 AM.jpeg" },
+               { name: "AIM Fabric Cleaner", price: "₨ 580", volume: "500ml", image: "BRANDWISE PRODUCTS/AIm/WhatsApp Image 2025-08-01 at 11.11.44 AM.jpeg" },
+               { name: "AIM Leather Cleaner", price: "₨ 520", volume: "400ml", image: "BRANDWISE PRODUCTS/AIm/WhatsApp Image 2025-08-01 at 11.11.45 AM.jpeg" },
+               { name: "AIM Odor Eliminator", price: "₨ 380", volume: "300ml", image: "BRANDWISE PRODUCTS/AIm/WhatsApp Image 2025-08-01 at 11.11.46 AM.jpeg" },
+               { name: "AIM Upholstery Cleaner", price: "₨ 450", volume: "500ml", image: "BRANDWISE PRODUCTS/AIm/WhatsApp Image 2025-08-01 at 11.11.47 AM.jpeg" },
+               { name: "AIM AC Cleaner", price: "₨ 650", volume: "400ml", image: "BRANDWISE PRODUCTS/AIm/WhatsApp Image 2025-08-01 at 11.11.48 AM.jpeg" },
+               { name: "AIM Interior Spray", price: "₨ 350", volume: "150ml", image: "BRANDWISE PRODUCTS/AIm/WhatsApp Image 2025-08-01 at 11.11.49 AM.jpeg" },
+               { name: "AIM Fabric Freshener", price: "₨ 420", volume: "200ml", image: "BRANDWISE PRODUCTS/AIm/WhatsApp Image 2025-08-01 at 11.11.50 AM.jpeg" }
+             ],
+             image: "BRANDWISE PRODUCTS/AIm/WhatsApp Image 2025-08-01 at 11.11.31 AM.jpeg"
+           },
+           dtr: {
+             name: "DTR",
+             description: "Professional automotive solutions",
+             features: ["Fast-acting", "Powerful cleaning", "Brake system safe", "Carburetor cleaning", "Professional grade", "Heavy-duty", "Industrial strength"],
+             products: [
+               { name: "DTR Engine Cleaner", price: "₨ 800", volume: "500ml", image: "BRANDWISE PRODUCTS/DTR/WhatsApp Image 2025-08-01 at 11.11.59 AM.jpeg" },
+               { name: "DTR Brake Cleaner", price: "₨ 600", volume: "400ml", image: "BRANDWISE PRODUCTS/DTR/WhatsApp Image 2025-08-01 at 11.12.00 PM.jpeg" },
+               { name: "DTR Contact Cleaner", price: "₨ 450", volume: "200ml", image: "BRANDWISE PRODUCTS/DTR/WhatsApp Image 2025-08-01 at 11.12.01 PM.jpeg" },
+               { name: "DTR Carburetor Cleaner", price: "₨ 550", volume: "300ml", image: "BRANDWISE PRODUCTS/DTR/WhatsApp Image 2025-08-01 at 11.12.02 PM.jpeg" },
+               { name: "DTR Fuel Injector Cleaner", price: "₨ 680", volume: "400ml", image: "BRANDWISE PRODUCTS/DTR/WhatsApp Image 2025-08-01 at 11.12.03 PM.jpeg" },
+               { name: "DTR Throttle Body Cleaner", price: "₨ 520", volume: "300ml", image: "BRANDWISE PRODUCTS/DTR/WhatsApp Image 2025-08-01 at 11.12.04 PM.jpeg" },
+               { name: "DTR Air Filter Cleaner", price: "₨ 480", volume: "250ml", image: "BRANDWISE PRODUCTS/DTR/WhatsApp Image 2025-08-01 at 11.12.05 PM.jpeg" },
+               { name: "DTR MAF Sensor Cleaner", price: "₨ 420", volume: "200ml", image: "BRANDWISE PRODUCTS/DTR/WhatsApp Image 2025-08-01 at 11.12.06 PM.jpeg" }
+             ],
+             image: "BRANDWISE PRODUCTS/DTR/WhatsApp Image 2025-08-01 at 11.11.59 AM.jpeg"
+           },
+           areon: {
+             name: "AREON",
+             description: "Advanced automotive care technology",
+             features: ["Odor elimination", "AC system cleaning", "Fabric protection", "Advanced formula", "Long-lasting", "Anti-bacterial", "Fresh fragrance"],
+             products: [
+               { name: "Areon Air Freshener", price: "₨ 350", volume: "100ml", image: "BRANDWISE PRODUCTS/AERON/WhatsApp Image 2025-08-01 at 11.12.07 PM.jpeg" },
+               { name: "Areon Interior Spray", price: "₨ 400", volume: "150ml", image: "BRANDWISE PRODUCTS/AERON/WhatsApp Image 2025-08-01 at 11.12.08 PM.jpeg" },
+               { name: "Areon Fabric Freshener", price: "₨ 450", volume: "200ml", image: "BRANDWISE PRODUCTS/AERON/WhatsApp Image 2025-08-01 at 11.12.09 PM.jpeg" },
+               { name: "Areon AC Cleaner", price: "₨ 580", volume: "300ml", image: "BRANDWISE PRODUCTS/AERON/WhatsApp Image 2025-08-01 at 11.12.10 PM.jpeg" },
+               { name: "Areon Odor Eliminator", price: "₨ 420", volume: "250ml", image: "BRANDWISE PRODUCTS/AERON/WhatsApp Image 2025-08-01 at 11.12.11 PM.jpeg" },
+               { name: "Areon Fabric Protector", price: "₨ 520", volume: "200ml", image: "BRANDWISE PRODUCTS/AERON/WhatsApp Image 2025-08-01 at 11.12.12 PM.jpeg" },
+               { name: "Areon Leather Care", price: "₨ 480", volume: "150ml", image: "BRANDWISE PRODUCTS/AERON/WhatsApp Image 2025-08-01 at 11.12.13 PM.jpeg" },
+               { name: "Areon Dashboard Cleaner", price: "₨ 380", volume: "200ml", image: "BRANDWISE PRODUCTS/AERON/WhatsApp Image 2025-08-01 at 11.12.14 PM.jpeg" }
+             ],
+             image: "BRANDWISE PRODUCTS/AERON/WhatsApp Image 2025-08-01 at 11.12.07 PM.jpeg"
+           }
+         };
+
+        const info = brandInfo[brand];
+        if (!info) return;
+
+                 // Create modal element
+         const modal = document.createElement('div');
+         modal.className = 'brand-modal';
+         modal.innerHTML = `
+           <div class="modal-overlay"></div>
+           <div class="modal-content">
+             <div class="modal-header">
+               <h2>${info.name}</h2>
+               <button class="modal-close">&times;</button>
+             </div>
+             <div class="modal-body">
+               <div class="brand-info-grid">
+                 <div class="brand-image-section">
+                   <img src="${info.image}" alt="${info.name}" class="brand-modal-image">
+                   <p class="brand-description">${info.description}</p>
+                 </div>
+                 <div class="brand-details-section">
+                   <div class="features-section">
+                     <h3>Key Features</h3>
+                     <ul class="features-list">
+                       ${info.features.map(feature => `<li>${feature}</li>`).join('')}
+                     </ul>
+                   </div>
+                 </div>
+               </div>
+               <div class="products-section">
+                 <h3>All Products</h3>
+                 <div class="modal-products-grid">
+                   ${info.products.map(product => `
+                     <div class="modal-product-card">
+                       <div class="modal-product-image">
+                         <img src="${product.image}" alt="${product.name}" onerror="this.style.display='none'">
+                       </div>
+                       <div class="modal-product-info">
+                         <h4>${product.name}</h4>
+                         <p class="modal-product-price">${product.price}</p>
+                         <p class="modal-product-volume">${product.volume}</p>
+                       </div>
+                     </div>
+                   `).join('')}
+                 </div>
+               </div>
+               <div class="modal-actions">
+                 <button class="btn-close-modal">Close</button>
+               </div>
+             </div>
+           </div>
+         `;
+
+        // Add to page
+        document.body.appendChild(modal);
+
+        // Add event listeners
+        const closeBtn = modal.querySelector('.modal-close');
+        const closeModalBtn = modal.querySelector('.btn-close-modal');
+        const overlay = modal.querySelector('.modal-overlay');
+
+        const closeModal = () => {
+          modal.classList.add('modal-closing');
+          setTimeout(() => {
+            modal.remove();
+          }, 300);
+        };
+
+        closeBtn.addEventListener('click', closeModal);
+        closeModalBtn.addEventListener('click', closeModal);
+        overlay.addEventListener('click', closeModal);
+
+        // Close on escape key
+        document.addEventListener('keydown', function escapeHandler(e) {
+          if (e.key === 'Escape') {
+            closeModal();
+            document.removeEventListener('keydown', escapeHandler);
+          }
+        });
+
+        // Show modal with animation
+        setTimeout(() => {
+          modal.classList.add('modal-show');
+        }, 10);
+      }
+
+
+
+     </script>
+
 </body>
 </html> 
+
